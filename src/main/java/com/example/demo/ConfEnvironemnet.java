@@ -1,16 +1,23 @@
 package com.example.demo;
 
-import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 
+@Configuration
+@PropertySource({
+        "classpath:application.properties",
+        "file:/opt/conf/application.properties"
+})
 public class ConfEnvironemnet {
 
-    private static ConfigurableEnvironment environment;
+    @Autowired
+    private Environment env;
 
-    public ConfEnvironemnet(ConfigurableEnvironment environment) {
-        ConfEnvironemnet.environment = environment;
+    public String getProperty(String property) {
+        return env.getProperty(property);
     }
 
-    public static ConfigurableEnvironment getEnvironment() {
-        return environment;
-    }
+
 }
