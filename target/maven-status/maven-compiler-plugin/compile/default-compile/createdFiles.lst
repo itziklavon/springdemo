@@ -1,0 +1,11 @@
+com\example\demo\DemoApplication.class
+com\example\demo\mapper\GamesMapper.class
+com\example\demo\mapper\DiscoveryMapper.class
+com\example\demo\HelloController.class
+com\example\demo\JerseyConf.class
+com\example\demo\RestApi.class
+com\example\demo\services\DbConnect.class
+com\example\demo\MyBatisConfiguration.class
+com\example\demo\ConfEnvironemnet.class
+com\example\demo\domain\Games.class
+com\example\demo\domain\Services.class
