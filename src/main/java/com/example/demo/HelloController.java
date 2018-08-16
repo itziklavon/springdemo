@@ -1,23 +1,20 @@
 package com.example.demo;
 
-import com.example.demo.services.Animal;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 
 @Service
-@Path("/bla")
+@Path("/test/v2")
 public class HelloController {
+
+    private String serviceName = "";
 
     @GET
     public String index() {
         return "Greetings from Spring Boot!";
     }
-
-    private String serviceName = "";
 
 //    @GET
 //    @Path("/test/{service}")

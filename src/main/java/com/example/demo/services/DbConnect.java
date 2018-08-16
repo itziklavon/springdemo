@@ -1,12 +1,10 @@
 package com.example.demo.services;
 
-import com.example.demo.ConfEnvironemnet;
+import com.example.demo.ConfEnvironment;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 
 import javax.sql.DataSource;
 
@@ -17,7 +15,7 @@ public class DbConnect {
     public static final String SECONDARY_DATASOURCE = "AnotherDS";
 
     @Autowired
-    private ConfEnvironemnet confEnvironemnet;
+    private ConfEnvironment confEnvironemnet;
 
     @Bean(name = PRIMARY_DATASOURCE, destroyMethod = "")
     public DataSource firstDataSource() {
