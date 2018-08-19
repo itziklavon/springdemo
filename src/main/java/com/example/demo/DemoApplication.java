@@ -14,8 +14,8 @@ public class DemoApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext configurableApplicationContext = new SpringApplicationBuilder(DemoApplication.class)
-                .properties("spring.config.name:application",
-                        "spring.config.location:/opt/conf/application.properties")
+//                .properties("spring.config.name:application",
+//                        "spring.config.location:/opt/conf/application.properties")
                 .build()
                 .run(args);
         LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
